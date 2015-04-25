@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace GendameModel
 {
@@ -17,6 +18,7 @@ namespace GendameModel
 
 		public enum Confidence
 		{
+			Total,
 			High,
 			Normal,
 			Low,
@@ -28,6 +30,11 @@ namespace GendameModel
 		public string Location{get;set;}
 		public string Source{ get; set;}
 		public string Description{ get; set; }
+
+		public override string ToString ()
+		{
+			return string.Format ("[GendameTarget: TargetName={0}, AssemblyName={1}, ProblemSeverity={2}, ProblemConfidence={3}, Location={4}, Source={5}, Description={6}]", TargetName, AssemblyName, ProblemSeverity, ProblemConfidence, Location, Source, Description);
+		}
 
 	}
 
@@ -42,6 +49,17 @@ namespace GendameModel
 		public GendameRule()
 		{
 			Targets = new List<GendameTarget> ();
+		}
+
+		public override string ToString ()
+		{
+			StringBuilder sb = new StringBuilder ();
+			sb.AppendLine(string.Format ("[GendameRule: Name={0}, Description={1}, URL={2}, Solution={3}]", Name, Description, URL, Solution));
+			foreach (GendameTarget t in Targets) {
+				sb.AppendLine (string.Format (t.ToString ()));
+			}
+
+			return sb.ToString ();
 		}
 	}
 
