@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,6 +43,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\GendameCSVExport\GendameCSVExport.csproj">
+      <Project>{f84ba1f2-3ebb-4226-97ff-90e21c8aee36}</Project>
+      <Name>GendameCSVExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GendameFilter\GendameFilter.csproj">
+      <Project>{398cc47c-d160-48aa-9510-5135d8fe149f}</Project>
+      <Name>GendameFilter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GendameModel\GendameModel.csproj">
       <Project>{F770E5ED-A667-4F4A-B148-ED952BBD6680}</Project>
       <Name>GendameModel</Name>

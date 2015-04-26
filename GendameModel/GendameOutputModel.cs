@@ -51,6 +51,15 @@ namespace GendameModel
 			Targets = new List<GendameTarget> ();
 		}
 
+        public GendameRule(GendameRule rule)
+        {
+            Name = rule.Name;
+            Description = rule.Description;
+            URL = rule.URL;
+            Solution = rule.Solution;
+            Targets = new List<GendameTarget>(rule.Targets);
+        }
+
 		public override string ToString ()
 		{
 			StringBuilder sb = new StringBuilder ();
