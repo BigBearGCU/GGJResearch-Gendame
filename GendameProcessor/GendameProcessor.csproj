@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1DE095F0-17E6-41CC-9B24-2CCFA625B114}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>GendameProcessor</RootNamespace>
@@ -44,11 +42,11 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GendameCSVExport\GendameCSVExport.csproj">
-      <Project>{f84ba1f2-3ebb-4226-97ff-90e21c8aee36}</Project>
+      <Project>{F84BA1F2-3EBB-4226-97FF-90E21C8AEE36}</Project>
       <Name>GendameCSVExport</Name>
     </ProjectReference>
     <ProjectReference Include="..\GendameFilter\GendameFilter.csproj">
-      <Project>{398cc47c-d160-48aa-9510-5135d8fe149f}</Project>
+      <Project>{398CC47C-D160-48AA-9510-5135D8FE149F}</Project>
       <Name>GendameFilter</Name>
     </ProjectReference>
     <ProjectReference Include="..\GendameModel\GendameModel.csproj">

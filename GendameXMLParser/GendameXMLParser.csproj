@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{448BBBC1-E614-4E8D-BD13-8C6EE0EC1064}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GendameXMLParser</RootNamespace>

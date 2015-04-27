@@ -12,6 +12,12 @@ namespace GendameProcessor
 	{
 		public static void Main (string[] args)
 		{
+
+			//get no args
+			int argCount=args.Length();
+			if (argCount < 1) {
+				Console.WriteLine ("No arguments, use GendameProcessor - h to for help");
+			}
 			//TODO: 1) Add filters
             GendameFilterProcessing filters = new GendameFilterProcessing();
             filters.AddFilter(new GendameFilter.GendameFilter { FilterField = "Location", FilterValue = "iTween" });
@@ -25,6 +31,19 @@ namespace GendameProcessor
             GendameCSVExporter export = new GendameCSVExporter();
             export.export("text.csv", filterRules);
 			Console.ReadLine ();
+		}
+
+		void ProcessCommands(string[] args)
+		{
+			if (args [0].Equals ("-h")) {
+				DisplayHelp ();
+			}
+		}
+
+		void DisplayHelp()
+		{
+			string helpMsg = "";
+			Console.WriteLine (helpMsg);
 		}
 	}
 }
