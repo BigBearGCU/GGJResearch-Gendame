@@ -14,7 +14,8 @@ namespace GendameProcessor
 		{
 
 			//get no args
-			int argCount=args.Length();
+			int argCount=args.Length;
+            string outputFilename = args[0].Split('.')[0]+".csv";
 			if (argCount < 1) {
 				Console.WriteLine ("No arguments, use GendameProcessor - h to for help");
 			}
@@ -29,7 +30,7 @@ namespace GendameProcessor
 			}
 
             GendameCSVExporter export = new GendameCSVExporter();
-            export.export("text.csv", filterRules);
+            export.export(outputFilename, filterRules);
 			Console.ReadLine ();
 		}
 
